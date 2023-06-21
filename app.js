@@ -13,6 +13,10 @@ const userRoutes = require("./router/user");
 
 app.use("/api",userRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Hello from HTS");
+});
+
 
 app.listen(PORT,()=>{
     console.log(`Server Running on : ${PORT}`);
